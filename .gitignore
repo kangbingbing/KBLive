@@ -59,3 +59,5 @@ fastlane/screenshots
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+KBLive/KBLive/Lib/IJKMediaFramework.framework/IJKMediaFramework
