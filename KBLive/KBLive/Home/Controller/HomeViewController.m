@@ -31,6 +31,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"我要直播" style:UIBarButtonItemStylePlain target:self action:@selector(liveBtnClick)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     [self prepareTableView];
     
     [self loadData];
@@ -46,15 +48,6 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     
-    //  我要直播按钮
-    UIButton *liveBtn = [[UIButton alloc]init];
-    [self.view addSubview:liveBtn];
-    liveBtn.backgroundColor = [UIColor blackColor];
-    [liveBtn setTitle:@"我要直播" forState:UIControlStateNormal];
-    [liveBtn addTarget:self action:@selector(liveBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [liveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.equalTo(self.view).offset(-15);
-    }];
     
 }
 
@@ -79,6 +72,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LiveModel *model = self.dataArray[indexPath.row];
     LivePlayerController *liveVC = [[LivePlayerController alloc]init];
     liveVC.stream_addr = model.stream_addr;
@@ -94,10 +88,11 @@
     }];
 }
 
+#pragma mark 我要直播 Click
 - (void)liveBtnClick{
 
     MYLiveViewController *liveVC = [[MYLiveViewController alloc]init];
-    [self.navigationController pushViewController:liveVC animated:YES];
+    [self.navigationController presentViewController:liveVC animated:YES completion:nil];
     NSLog(@"我要直播");
 }
 
@@ -123,7 +118,7 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
-    [manager GET:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:@"http://116.211.167.106/api/live/aggregation?uid=23455&interest=1" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if ([responseObject[@"error_msg"] isEqualToString:@"操作成功"]) {
             self.dataArray = [LiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
