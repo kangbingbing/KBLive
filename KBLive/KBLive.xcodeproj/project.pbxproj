@@ -30,6 +30,7 @@
 		4E8C5D8C1E6EBD3E002CC1EF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C5D8B1E6EBD3E002CC1EF /* HomeViewController.m */; };
 		4E8C5D8F1E6EBFE9002CC1EF /* LivePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C5D8E1E6EBFE9002CC1EF /* LivePlayerController.m */; };
 		4E8C5D911E6EC05B002CC1EF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E8C5D901E6EC05B002CC1EF /* IJKMediaFramework.framework */; };
+		4E972DE01E8B5F5700A4F0AA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E972DDF1E8B5F5700A4F0AA /* libstdc++.tbd */; };
 		4E9EF74C1E8A3DF000E64FEF /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF74B1E8A3DF000E64FEF /* LFLivePreview.m */; };
 		4E9EF7521E8A3E4300E64FEF /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF74F1E8A3E4300E64FEF /* UIControl+YYAdd.m */; };
 		4E9EF7531E8A3E4300E64FEF /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF7511E8A3E4300E64FEF /* UIView+YYAdd.m */; };
@@ -92,6 +93,7 @@
 		4E8C5D8D1E6EBFE9002CC1EF /* LivePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayerController.h; sourceTree = "<group>"; };
 		4E8C5D8E1E6EBFE9002CC1EF /* LivePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePlayerController.m; sourceTree = "<group>"; };
 		4E8C5D901E6EC05B002CC1EF /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		4E972DDF1E8B5F5700A4F0AA /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4E9EF74A1E8A3DF000E64FEF /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
 		4E9EF74B1E8A3DF000E64FEF /* LFLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
 		4E9EF74E1E8A3E4300E64FEF /* UIControl+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+YYAdd.h"; sourceTree = "<group>"; };
@@ -111,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E972DE01E8B5F5700A4F0AA /* libstdc++.tbd in Frameworks */,
+				4E3831D21E6EE05900085B1C /* AVFoundation.framework in Frameworks */,
 				4E3831E21E6EE0AD00085B1C /* VideoToolbox.framework in Frameworks */,
 				4E3831E01E6EE0A300085B1C /* OpenGLES.framework in Frameworks */,
 				4E3831DE1E6EE09B00085B1C /* MobileCoreServices.framework in Frameworks */,
@@ -119,7 +123,6 @@
 				4E3831D81E6EE07300085B1C /* libbz2.tbd in Frameworks */,
 				4E3831D61E6EE06800085B1C /* CoreVideo.framework in Frameworks */,
 				4E3831D41E6EE06100085B1C /* CoreMedia.framework in Frameworks */,
-				4E3831D21E6EE05900085B1C /* AVFoundation.framework in Frameworks */,
 				4E3831D01E6EE05300085B1C /* AudioToolbox.framework in Frameworks */,
 				4E8C5D911E6EC05B002CC1EF /* IJKMediaFramework.framework in Frameworks */,
 				E23D960141CFEE0D40B346B5 /* libPods-KBLive.a in Frameworks */,
@@ -287,6 +290,7 @@
 		A97D531F1BBE6E6E56416092 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E972DDF1E8B5F5700A4F0AA /* libstdc++.tbd */,
 				4E3831E11E6EE0AD00085B1C /* VideoToolbox.framework */,
 				4E3831DF1E6EE0A300085B1C /* OpenGLES.framework */,
 				4E3831DD1E6EE09B00085B1C /* MobileCoreServices.framework */,

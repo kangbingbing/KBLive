@@ -302,8 +302,10 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         _closeButton.top = 20;
         [_closeButton setImage:[UIImage imageNamed:@"close_preview"] forState:UIControlStateNormal];
         _closeButton.exclusiveTouch = YES;
+        __weak typeof(self) _self = self;
         [_closeButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-
+            // 先关闭直播
+            [_self.session stopLive];
             [[NSNotificationCenter defaultCenter]postNotificationName:@"CloseBtnClick" object:nil];
         }];
     }

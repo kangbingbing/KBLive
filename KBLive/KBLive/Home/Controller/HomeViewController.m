@@ -35,6 +35,8 @@
     self.navigationItem.rightBarButtonItem = rightItem;
     [self prepareTableView];
     
+
+    
     [self loadData];
 }
 
