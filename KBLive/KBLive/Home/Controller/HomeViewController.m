@@ -45,7 +45,7 @@
     UITableView *tableView = [[UITableView alloc]init];
     self.tableView = tableView;
     tableView.frame = self.view.bounds;
-    tableView.rowHeight = ([UIScreen mainScreen].bounds.size.width * 618/480)+1;
+    tableView.rowHeight = ([UIScreen mainScreen].bounds.size.width * 618/480);
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];

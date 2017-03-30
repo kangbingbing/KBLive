@@ -736,6 +736,7 @@
 					"$(PROJECT_DIR)/KBLive/Lib",
 				);
 				INFOPLIST_FILE = KBLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kangbing.KBLive--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -755,6 +756,7 @@
 					"$(PROJECT_DIR)/KBLive/Lib",
 				);
 				INFOPLIST_FILE = KBLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kangbing.KBLive--";
 				PRODUCT_NAME = "$(TARGET_NAME)";

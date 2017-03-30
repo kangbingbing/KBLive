@@ -73,11 +73,11 @@
 
     UIButton *backBtn = [[UIButton alloc]init];
     [self.view addSubview:backBtn];
-    [backBtn setImage:[UIImage imageNamed:@"back_left"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"close_preview"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(10);
-        make.top.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-15);
+        make.bottom.equalTo(self.view).offset(-15);
         make.height.width.equalTo(@50);
     }];
 }
