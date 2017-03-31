@@ -7,9 +7,7 @@
 //
 
 #import "LivePlayerController.h"
-#import <IJKMediaFramework/IJKMediaFramework.h>
-#import "UIImageView+WebCache.h"
-#import "Masonry.h"
+
 
 @interface LivePlayerController ()
 

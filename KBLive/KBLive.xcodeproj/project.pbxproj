@@ -76,6 +76,7 @@
 		4E3831DD1E6EE09B00085B1C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4E3831DF1E6EE0A300085B1C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4E3831E11E6EE0AD00085B1C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		4E7E690F1E8DE8F2002AFAA7 /* KBLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBLive.pch; sourceTree = "<group>"; };
 		4E8C5D4F1E6EBC2E002CC1EF /* KBLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8C5D531E6EBC2E002CC1EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E8C5D551E6EBC2E002CC1EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8C5D531E6EBC2E002CC1EF /* main.m */,
+				4E7E690F1E8DE8F2002AFAA7 /* KBLive.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -735,6 +737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLive/Lib",
 				);
+				GCC_PREFIX_HEADER = KBLive/KBLive.pch;
 				INFOPLIST_FILE = KBLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -755,6 +758,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLive/Lib",
 				);
+				GCC_PREFIX_HEADER = KBLive/KBLive.pch;
 				INFOPLIST_FILE = KBLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

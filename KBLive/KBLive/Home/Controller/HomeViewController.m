@@ -8,11 +8,8 @@
 
 #import "HomeViewController.h"
 #import "LivePlayerController.h"
-#import <AFNetworking/AFNetworking.h>
-#import "MJExtension.h"
 #import "LiveModel.h"
 #import "PersonCell.h"
-#import "Masonry.h"
 #import "MYLiveViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>

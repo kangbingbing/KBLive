@@ -7,7 +7,6 @@
 //
 
 #import "PersonCell.h"
-#import "UIImageView+WebCache.h"
 #import "LiveModel.h"
 
 #define UIScreen_Width [UIScreen mainScreen].bounds.size.width

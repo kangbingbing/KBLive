@@ -1,0 +1,22 @@
+//
+//  KBLive.pch
+//  KBLive
+//
+//  Created by kangbing on 17/3/31.
+//  Copyright © 2017年 kangbing. All rights reserved.
+//
+
+#ifndef KBLive_pch
+#define KBLive_pch
+
+
+#import "Masonry.h"
+#import <AFNetworking/AFNetworking.h>
+#import "MJExtension.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+#import "UIImageView+WebCache.h"
+
+
+
+
+#endif /* KBLive_pch */
