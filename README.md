@@ -7,7 +7,7 @@
 ![](https://ws1.sinaimg.cn/large/9e1008a3ly1fe2pmi0vwwj20cr0lh130.jpg)
 
 
-![示例gif](https://ws1.sinaimg.cn/mw690/9e1008a3ly1fe2pmyxv95g20ab0ifnpj.gif)
+![示例 GIF图](http://ww1.sinaimg.cn/large/9e1008a3ly1fe5tof66oqg20ab0ifkjn.gif)
 
 
 
