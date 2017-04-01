@@ -34,6 +34,7 @@
 		4E9EF74C1E8A3DF000E64FEF /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF74B1E8A3DF000E64FEF /* LFLivePreview.m */; };
 		4E9EF7521E8A3E4300E64FEF /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF74F1E8A3E4300E64FEF /* UIControl+YYAdd.m */; };
 		4E9EF7531E8A3E4300E64FEF /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EF7511E8A3E4300E64FEF /* UIView+YYAdd.m */; };
+		4EFB59E31E8FA66700F156A4 /* KBRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB59E21E8FA66700F156A4 /* KBRefreshHeader.m */; };
 		82AFEC108A53000103967128 /* libPods-KBLiveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 055335C94C2A7C4EEB3C3289 /* libPods-KBLiveUITests.a */; };
 		E23D960141CFEE0D40B346B5 /* libPods-KBLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 583A746345358254445B0F06 /* libPods-KBLive.a */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,8 @@
 		4E9EF74F1E8A3E4300E64FEF /* UIControl+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+YYAdd.m"; sourceTree = "<group>"; };
 		4E9EF7501E8A3E4300E64FEF /* UIView+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
 		4E9EF7511E8A3E4300E64FEF /* UIView+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYAdd.m"; sourceTree = "<group>"; };
+		4EFB59E11E8FA66700F156A4 /* KBRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBRefreshHeader.h; sourceTree = "<group>"; };
+		4EFB59E21E8FA66700F156A4 /* KBRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBRefreshHeader.m; sourceTree = "<group>"; };
 		583A746345358254445B0F06 /* libPods-KBLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KBLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9D3A7FFA88625D37F6F6BF /* libPods-KBLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KBLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D160DA2B5A1537F031E4CC2 /* Pods-KBLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KBLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KBLiveTests/Pods-KBLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				4E9EF74F1E8A3E4300E64FEF /* UIControl+YYAdd.m */,
 				4E9EF7501E8A3E4300E64FEF /* UIView+YYAdd.h */,
 				4E9EF7511E8A3E4300E64FEF /* UIView+YYAdd.m */,
+				4EFB59E11E8FA66700F156A4 /* KBRefreshHeader.h */,
+				4EFB59E21E8FA66700F156A4 /* KBRefreshHeader.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E8C5D571E6EBC2E002CC1EF /* AppDelegate.m in Sources */,
+				4EFB59E31E8FA66700F156A4 /* KBRefreshHeader.m in Sources */,
 				4E0265211E6F928300D61A08 /* PersonCell.m in Sources */,
 				4E9EF7531E8A3E4300E64FEF /* UIView+YYAdd.m in Sources */,
 				4E8C5D541E6EBC2E002CC1EF /* main.m in Sources */,

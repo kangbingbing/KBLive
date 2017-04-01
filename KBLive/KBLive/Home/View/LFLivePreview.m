@@ -30,7 +30,7 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
     }
 }
 
-@interface LFLivePreview ()<LFLiveSessionDelegate>
+@interface LFLivePreview ()<LFLiveSessionDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIButton *beautyButton;
 @property (nonatomic, strong) UIButton *cameraButton;
@@ -303,9 +303,8 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         _closeButton.exclusiveTouch = YES;
         __weak typeof(self) _self = self;
         [_closeButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-            // 先关闭直播
-            [_self.session stopLive];
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"CloseBtnClick" object:nil];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"确定要结束吗?" message:nil delegate:_self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            [alert show];
         }];
     }
     return _closeButton;
@@ -364,16 +363,32 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
                 LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
 //                stream.url = @"rtmp://live.hkstv.hk.lxdns.com:1935/live/stream153";
                 // 本地推流地址
-                stream.url = @"rtmp://192.168.1.115:1935/rtmplive/room";
+                stream.url = @"rtmp://192.168.0.105:1935/rtmplive/room";
                 [_self.session startLive:stream];
+                _self.startLiveButton.hidden = YES;
             } else {
                 [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
                 [_self.session stopLive];
+                
             }
         }];
     }
     return _startLiveButton;
 }
+
+
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        // 先关闭
+        [self.session stopLive];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"CloseBtnClick" object:nil];
+    }
+
+}
+
+
 
 @end
 

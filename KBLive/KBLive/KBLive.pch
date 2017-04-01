@@ -18,5 +18,8 @@
 
 
 
+#define UIScreen_Width [UIScreen mainScreen].bounds.size.width
+#define UIScreen_Height [UIScreen mainScreen].bounds.size.height
+
 
 #endif /* KBLive_pch */

@@ -9,8 +9,6 @@
 #import "PersonCell.h"
 #import "LiveModel.h"
 
-#define UIScreen_Width [UIScreen mainScreen].bounds.size.width
-#define UIScreen_Height [UIScreen mainScreen].bounds.size.height
 
 @implementation PersonCell
 
@@ -30,14 +28,11 @@
 - (UIImageView *)iconImage
 {
     if (!_iconImage) {
-        
         self.iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 45, 45)];
-        //        _iconImage.backgroundColor = [UIColor redColor];
-        _iconImage.layer.cornerRadius = _iconImage.frame.size.width/2;
+        _iconImage.layer.cornerRadius = _iconImage.frame.size.width * 0.5;
         _iconImage.layer.masksToBounds = YES;
-        CALayer *layer = [_iconImage layer];
-        layer.borderColor = [[UIColor purpleColor] CGColor];
-        layer.borderWidth = 1.5f;
+        _iconImage.layer.borderColor = [[UIColor purpleColor] CGColor];
+        _iconImage.layer.borderWidth = 1.5f;
     }
     return _iconImage;
 }
@@ -46,7 +41,7 @@
 {
     if (!_nameLabel) {
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(_iconImage.frame.origin.x+_iconImage.frame.size.width+10, _iconImage.frame.origin.y, UIScreen_Width, _iconImage.frame.size.height/2)];
-        _nameLabel.text = @"映客";
+        _nameLabel.text = @"昵称";
         _nameLabel.textColor = [UIColor blackColor];
         _nameLabel.font = [UIFont systemFontOfSize:14];
     }
@@ -93,8 +88,7 @@
 - (UIImageView *)coverImage
 {
     if (!_coverImage) {
-        self.coverImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, _iconImage.frame.origin.y+_iconImage.frame.size.height+10, UIScreen_Width, ([UIScreen mainScreen].bounds.size.width * 618/480) + 1 - _iconImage.frame.size.height-20)];
-        //        _coverImage.backgroundColor = [UIColor redColor];
+        self.coverImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, _iconImage.frame.origin.y+_iconImage.frame.size.height+10, UIScreen_Width, ([UIScreen mainScreen].bounds.size.width * 618/480) - _iconImage.frame.size.height-20)];
     }
     return _coverImage;
 }
@@ -106,7 +100,7 @@
     _nameLabel.text = liveModel.creator.nick;
     // 用户所在城市
     if ([liveModel.city isEqualToString:@""]) {
-        [_address setTitle:@"难道在火星?" forState:(UIControlStateNormal)];
+        [_address setTitle:@"暂无位置" forState:(UIControlStateNormal)];
     }else{
         [_address setTitle:liveModel.city forState:(UIControlStateNormal)];
     }

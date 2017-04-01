@@ -11,6 +11,7 @@
 #import "LiveModel.h"
 #import "PersonCell.h"
 #import "MYLiveViewController.h"
+#import "KBRefreshHeader.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,7 +33,6 @@
     self.navigationItem.rightBarButtonItem = rightItem;
     [self prepareTableView];
     
-
     
     [self loadData];
 }
@@ -47,6 +47,8 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     
+    KBRefreshHeader *header = [KBRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    tableView.mj_header = header;
     
 }
 
@@ -123,8 +125,9 @@
             self.dataArray = [LiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
             [self.tableView reloadData];
         }
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [self.tableView.mj_header endRefreshing];
         NSLog(@"%@",error);
     }];
 
