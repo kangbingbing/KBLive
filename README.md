@@ -1,6 +1,6 @@
 ## 一步一步带你实现 iOS 直播
 
-详细介绍请点击[这里](http://kangbingbing.cn/iOS%E7%9B%B4%E6%92%AD-Demo/)
+详细介绍请点击[这里](http://kangbingbing.com/iOS%E7%9B%B4%E6%92%AD-Demo/)
 
 **代码 clone 到本地后请下载 IJKMediaFramework.framework [下载](https://pan.baidu.com/s/1hsJZFzm)  密码: vqwp, 添加到项目Lib 文件夹中即可运行。**
 
